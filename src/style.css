@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+}
+
+.hello {
+   color: red;
+
+ }
+.nav-bar{
+  background-color: gray;
+}
+
+.nav-content{
+  display: flex;
+  justify-content: space-between;
+}
+
+.title{
+  margin: 16px;
+}
+
+li { display: inline; }
+
+.img-container{
+  display: flex;
+  justify-content: center;
+}
+
+.landing-text{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.lading-title{
+  margin: auto;
+  margin-top: 50px;
+}
+
+.landing-description{
+  margin: auto;
+}
+
+.land-image{
+  width: 80%;
+}
