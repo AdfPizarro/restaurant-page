@@ -1,5 +1,38 @@
 body {
   margin: 0;
+  background-color: #373737;
+}
+
+.menu{
+  font-family: 'Oswald', sans-serif;
+  display: grid;
+  margin: 100px;
+  grid-template-columns: auto auto auto;
+  grid-gap: 60px;
+}
+
+.menu-item{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.name{
+  font-size: 50px;
+}
+
+.dish{
+  margin-top: 20px 0px;
+}
+
+.price{
+  font-size: 40px;
+}
+
+.description{
+  font-family: 'Dancing Script', cursive;
+  font-size: 25px;
 }
 
 .hello {
@@ -7,7 +40,9 @@ body {
 
  }
 .nav-bar{
-  background-color: gray;
+  background-color: #212121;
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
 }
 
 .nav-content{
@@ -17,9 +52,15 @@ body {
 
 .title{
   margin: 16px;
+
+  font-size: 30px;
 }
 
-li { display: inline; }
+li {
+  display: inline;
+  margin: 25px;
+  font-size: 25px;
+}
 
 .img-container{
   display: flex;
@@ -27,20 +68,30 @@ li { display: inline; }
 }
 
 .landing-text{
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   align-content: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
 .lading-title{
+  font-size: 50px;
+  font-weight: 500;
   margin: auto;
-  margin-top: 50px;
+  font-family: 'Oswald', sans-serif;
+
 }
 
 .landing-description{
+  font-size: 40px;
+  margin-top: 30px;
   margin: auto;
+  font-family: 'Dancing Script', cursive;
 }
 
 .land-image{
-  width: 80%;
+  margin-top: 40px;
+  width: 60%;
 }
