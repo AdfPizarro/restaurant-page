@@ -5,61 +5,57 @@ import MANGO from '../mango-habanero.png';
 import HONEY from '../honey-mustard.png';
 import VEGGIES from '../veggies.png';
 
-let menu=[];
+const menu = [];
 class Dish {
-    constructor(name, price, image, description) {
-        this.name = name;
-        this.price = price;
-        switch (image) {
-          case "BBQ":
-          this.image=BBQ;
-          break;
-          case "CHIPOTLE":
-          this.image=CHIPOTLE;
-          break;
-          case "MANGO-HABANERO":
-          this.image=HABANERO;
-          break;
-          case "MANGO":
-          this.image=MANGO;
-          break;
-          case "HONEY":
-          this.image=HONEY;
-          break;
-          case "VEGGIES":
-          this.image=VEGGIES;
-          break;
-          default:
-          this.image=BBQ;
-          break;
-        }
-        this.description=description;
+  constructor(name, price, image, description) {
+    this.name = name;
+    this.price = price;
+    switch (image) {
+      case 'BBQ':
+        this.image = BBQ;
+        break;
+      case 'CHIPOTLE':
+        this.image = CHIPOTLE;
+        break;
+      case 'MANGO-HABANERO':
+        this.image = HABANERO;
+        break;
+      case 'MANGO':
+        this.image = MANGO;
+        break;
+      case 'HONEY':
+        this.image = HONEY;
+        break;
+      case 'VEGGIES':
+        this.image = VEGGIES;
+        break;
+      default:
+        this.image = BBQ;
+        break;
     }
+    this.description = description;
+  }
 }
 
-menu.push(new Dish("BBQ++", "$45.30", "BBQ", "Enjot the classic, with C++ sauce"));
+menu.push(new Dish('BBQ++', '$45.30', 'BBQ', 'Enjot the classic, with C++ sauce'));
 
+menu.push(new Dish('Chipotle.js', '$48.30', 'CHIPOTLE', 'With our special spicy js sauce'));
+menu.push(new Dish('Mango-habanero', '$44.30', 'HABANERO', 'The perfect sweet spicy bundle'));
+menu.push(new Dish('Mango', '$44.30', 'MANGO', 'Simple and tasty (no dependencys required)'));
+menu.push(new Dish('Honey Mustard', '$44.30', 'HONEY', 'Weird combination, some people like it'));
+menu.push(new Dish('Veggies', '$12.30', 'VEGGIES', 'The prefect complement to bundle your meal'));
 
-menu.push(new Dish("Chipotle.js", "$48.30", "CHIPOTLE", "With our special spicy js sauce"));
-menu.push(new Dish("Mango-habanero", "$44.30", "HABANERO", "The perfect sweet spicy bundle"));
-menu.push(new Dish("Mango", "$44.30", "MANGO", "Simple and tasty (no dependencys required)"));
-menu.push(new Dish("Honey Mustard", "$44.30", "HONEY", "Weird combination, some people like it"));
-menu.push(new Dish("Veggies", "$12.30", "VEGGIES", "The prefect complement to bundle your meal"));
-
-
-
-
-function generateMenu(){
-  const menu_container=document.createElement('div');
+function generateMenu() {
+  const menu_container = document.createElement('div');
   menu_container.setAttribute('class', 'menu');
 
-  for (var i = 0; i < menu.length; i++) {
-    const dish=document.createElement('div');
-    const name=document.createElement('div');
-    const image_container=document.createElement('div');
-    const image=document.createElement('img');
-    const price=document.createElement('div');
-    const description=document.createElement('div');
+  for (let i = 0; i < menu.length; i++) {
+    const dish = document.createElement('div');
+    const name = document.createElement('div');
+    const image_container = document.createElement('div');
+    const image = document.createElement('img');
+    const price = document.createElement('div');
+    const description = document.createElement('div');
 
     dish.setAttribute('class', 'menu-item');
     name.setAttribute('class', 'name');
@@ -69,9 +65,9 @@ function generateMenu(){
 
     image.setAttribute('src', menu[i].image);
 
-    name.innerHTML=menu[i].name;
-    price.innerHTML=menu[i].price;
-    description.innerHTML=menu[i].description;
+    name.innerHTML = menu[i].name;
+    price.innerHTML = menu[i].price;
+    description.innerHTML = menu[i].description;
 
     image_container.appendChild(image);
 
@@ -80,12 +76,10 @@ function generateMenu(){
     dish.appendChild(price);
     dish.appendChild(description);
 
-
     menu_container.append(dish);
   }
 
   return menu_container;
-
 }
 
-export  {generateMenu};
+export { generateMenu };

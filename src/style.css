@@ -9,11 +9,12 @@ body {
   margin: 100px;
   grid-template-columns: auto auto auto;
   grid-gap: 60px;
+  color: #ffffff;
 }
 
 
 
-.menu-item, .location, .contact{
+.menu-item, .contact{
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -80,9 +81,16 @@ li {
   align-content: center;
   margin-top: 30px;
   margin-bottom: 40px;
+
 }
 
-.lading-title{
+.instructions{
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  margin: 50px;
+}
+
+.lading-title, .header{
   font-size: 50px;
   font-weight: 500;
   margin: auto;

@@ -1,9 +1,9 @@
-import _ from 'lodash';
 import './style.css';
-import {generateLanding} from './modules/landing.js';
-import {generateNav} from './modules/nav.js';
-import {generateMenu} from './modules/menu.js';
-import {generateLocations} from './modules/location.js';
+import { generateLanding } from './modules/landing';
+import { generateNav } from './modules/nav';
+import { generateMenu } from './modules/menu';
+import { generateLocations } from './modules/location';
+import { generateContact } from './modules/contact';
 
 import Landing from './land.png';
 
@@ -22,41 +22,41 @@ const restaurant = {
     const locations = document.getElementById('locations');
     locations.addEventListener('click', drawLocations, false);
     const contact = document.getElementById('contact');
-    contact.addEventListener('click', showContact, false);
-
+    contact.addEventListener('click', drawContact, false);
   },
 };
 
-
-restaurant.init();
-
-function clearContainer(){
-  container.innerHTML="";
+function clearContainer() {
+  container.innerHTML = '';
 }
 
-function drawNav(activeIndex){
+function drawNav(activeIndex) {
   container.appendChild(generateNav(activeIndex));
   restaurant.eventListener();
 }
 
-function drawLanding(){
-  clearContainer()
+function drawLanding() {
+  clearContainer();
   drawNav();
   container.appendChild(generateLanding(Landing));
 }
 
-function drawMenu(){
-  clearContainer()
-  drawNav("menu");
+function drawMenu() {
+  clearContainer();
+  drawNav('menu');
   container.appendChild(generateMenu());
 }
 
-function drawLocations(){
-  clearContainer()
-  drawNav("locations");
+function drawLocations() {
+  clearContainer();
+  drawNav('locations');
   container.appendChild(generateLocations());
 }
 
-function showContact(event){
-  console.log("Contact");
+function drawContact() {
+  clearContainer();
+  drawNav('contact');
+  container.appendChild(generateContact());
 }
+
+restaurant.init();
