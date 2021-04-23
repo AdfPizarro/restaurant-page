@@ -3,6 +3,7 @@ import './style.css';
 import {generateLanding} from './modules/landing.js';
 import {generateNav} from './modules/nav.js';
 import {generateMenu} from './modules/menu.js';
+import {generateLocations} from './modules/location.js';
 
 import Landing from './land.png';
 
@@ -19,7 +20,7 @@ const restaurant = {
     const menu = document.getElementById('menu');
     menu.addEventListener('click', drawMenu, false);
     const locations = document.getElementById('locations');
-    locations.addEventListener('click', showLocations, false);
+    locations.addEventListener('click', drawLocations, false);
     const contact = document.getElementById('contact');
     contact.addEventListener('click', showContact, false);
 
@@ -33,8 +34,8 @@ function clearContainer(){
   container.innerHTML="";
 }
 
-function drawNav(){
-  container.appendChild(generateNav());
+function drawNav(activeIndex){
+  container.appendChild(generateNav(activeIndex));
   restaurant.eventListener();
 }
 
@@ -44,14 +45,16 @@ function drawLanding(){
   container.appendChild(generateLanding(Landing));
 }
 
-function drawMenu(event){
+function drawMenu(){
   clearContainer()
-  drawNav();
+  drawNav("menu");
   container.appendChild(generateMenu());
 }
 
-function showLocations(event){
-  console.log("Locations");
+function drawLocations(){
+  clearContainer()
+  drawNav("locations");
+  container.appendChild(generateLocations());
 }
 
 function showContact(event){

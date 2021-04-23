@@ -3,7 +3,7 @@ body {
   background-color: #373737;
 }
 
-.menu{
+.menu, .locations{
   font-family: 'Oswald', sans-serif;
   display: grid;
   margin: 100px;
@@ -11,7 +11,9 @@ body {
   grid-gap: 60px;
 }
 
-.menu-item{
+
+
+.menu-item, .location, .contact{
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -60,6 +62,10 @@ li {
   display: inline;
   margin: 25px;
   font-size: 25px;
+}
+
+.active{
+  border-bottom: 5px solid white;
 }
 
 .img-container{

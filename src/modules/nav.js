@@ -1,5 +1,5 @@
 
-function generateNav(){
+function generateNav(activeIndex){
   const nav=document.createElement('nav');
   const nav_content=document.createElement('div');
   const title=document.createElement('div');
@@ -21,6 +21,16 @@ function generateNav(){
   title.setAttribute('id', 'home');
   nav_menu.setAttribute('id', 'menu');
 
+  switch (activeIndex) {
+    case "menu":
+      nav_menu.setAttribute('class', 'active');
+      break;
+      case "locations":
+        nav_locations.setAttribute('class', 'active');
+        break;
+    default:
+
+  }
 
   title.appendChild(icon);
   title.innerHTML +=" Boneles.js";
