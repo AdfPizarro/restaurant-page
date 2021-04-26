@@ -15,7 +15,6 @@ This is a webpage to show a landing page, the menu and contact info for a restau
 
 ## Getting Started
 
-
 To get a local copy up and running follow these simple example steps.
 
 ### Install
@@ -49,8 +48,7 @@ Feel free to check the [issues page](https://github.com/AdfPizarro/restaurant-pa
 
 Give a ⭐️ if you like this project!
 
-
-
 ## 📝 License
 
 This project is [MIT](./LICENSE) licensed.
+>>>>>>> Stashed changes
