@@ -1,7 +1,7 @@
 import BBQ from '../bbq.png';
 import CHIPOTLE from '../chipotle.png';
 import HABANERO from '../mango-habanero.png';
-import MANGO from '../mango-habanero.png';
+import MANGO from '../mango.png';
 import HONEY from '../honey-mustard.png';
 import VEGGIES from '../veggies.png';
 
@@ -46,20 +46,20 @@ menu.push(new Dish('Honey Mustard', '$44.30', 'HONEY', 'Weird combination, some 
 menu.push(new Dish('Veggies', '$12.30', 'VEGGIES', 'The prefect complement to bundle your meal'));
 
 function generateMenu() {
-  const menu_container = document.createElement('div');
-  menu_container.setAttribute('class', 'menu');
+  const menuContainer = document.createElement('div');
+  menuContainer.setAttribute('class', 'menu');
 
-  for (let i = 0; i < menu.length; i++) {
+  for (let i = 0; i < menu.length; i += 1) {
     const dish = document.createElement('div');
     const name = document.createElement('div');
-    const image_container = document.createElement('div');
+    const imageContainer = document.createElement('div');
     const image = document.createElement('img');
     const price = document.createElement('div');
     const description = document.createElement('div');
 
     dish.setAttribute('class', 'menu-item');
     name.setAttribute('class', 'name');
-    image_container.setAttribute('class', 'dish');
+    imageContainer.setAttribute('class', 'dish');
     price.setAttribute('class', 'price');
     description.setAttribute('class', 'description');
 
@@ -69,17 +69,17 @@ function generateMenu() {
     price.innerHTML = menu[i].price;
     description.innerHTML = menu[i].description;
 
-    image_container.appendChild(image);
+    imageContainer.appendChild(image);
 
     dish.appendChild(name);
-    dish.appendChild(image_container);
+    dish.appendChild(imageContainer);
     dish.appendChild(price);
     dish.appendChild(description);
 
-    menu_container.append(dish);
+    menuContainer.append(dish);
   }
 
-  return menu_container;
+  return menuContainer;
 }
 
-export { generateMenu };
+export default generateMenu;
