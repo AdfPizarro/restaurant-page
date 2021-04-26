@@ -3,59 +3,58 @@ body {
   background-color: #373737;
 }
 
-.menu, .locations{
+.menu,
+.locations {
   font-family: 'Oswald', sans-serif;
   display: grid;
   margin: 100px;
   grid-template-columns: auto auto auto;
   grid-gap: 60px;
-  color: #ffffff;
+  color: #fff;
 }
 
-
-
-.menu-item, .contact{
+.menu-item,
+.contact {
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: #ffffff;
+  color: #fff;
 }
 
-.name{
+.name {
   font-size: 50px;
 }
 
-.dish{
-  margin-top: 20px 0px;
+.dish {
+  margin-top: 20px;
 }
 
-.price{
+.price {
   font-size: 40px;
 }
 
-.description{
+.description {
   font-family: 'Dancing Script', cursive;
   font-size: 25px;
 }
 
 .hello {
-   color: red;
+  color: red;
+}
 
- }
-.nav-bar{
+.nav-bar {
   background-color: #212121;
-  color: #ffffff;
+  color: #fff;
   font-family: 'Oswald', sans-serif;
 }
 
-.nav-content{
+.nav-content {
   display: flex;
   justify-content: space-between;
 }
 
-.title{
+.title {
   margin: 16px;
-
   font-size: 30px;
 }
 
@@ -65,47 +64,46 @@ li {
   font-size: 25px;
 }
 
-.active{
+.active {
   border-bottom: 5px solid white;
 }
 
-.img-container{
+.img-container {
   display: flex;
   justify-content: center;
 }
 
-.landing-text{
-  color: #ffffff;
+.landing-text {
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-content: center;
   margin-top: 30px;
   margin-bottom: 40px;
-
 }
 
-.instructions{
+.instructions {
   font-family: 'Oswald', sans-serif;
   font-size: 20px;
   margin: 50px;
 }
 
-.lading-title, .header{
+.lading-title,
+.header {
   font-size: 50px;
   font-weight: 500;
   margin: auto;
   font-family: 'Oswald', sans-serif;
-
 }
 
-.landing-description{
+.landing-description {
   font-size: 40px;
-  margin-top: 30px;
   margin: auto;
+  margin-top: 30px;
   font-family: 'Dancing Script', cursive;
 }
 
-.land-image{
+.land-image {
   margin-top: 40px;
   width: 60%;
 }
