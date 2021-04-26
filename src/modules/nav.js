@@ -1,33 +1,33 @@
 function generateNav(activeIndex) {
   const nav = document.createElement('nav');
-  const nav_content = document.createElement('div');
+  const navContent = document.createElement('div');
   const title = document.createElement('div');
   const icon = document.createElement('div');
-  const nav_elements = document.createElement('div');
-  const nav_list = document.createElement('ul');
-  const nav_menu = document.createElement('li');
-  const nav_locations = document.createElement('li');
-  const nav_contact = document.createElement('li');
+  const navElements = document.createElement('div');
+  const navList = document.createElement('ul');
+  const navMenu = document.createElement('li');
+  const navLocations = document.createElement('li');
+  const navContact = document.createElement('li');
 
   nav.setAttribute('class', 'nav-bar');
 
-  nav_content.setAttribute('class', 'nav-content');
+  navContent.setAttribute('class', 'nav-content');
   title.setAttribute('class', 'title');
   icon.setAttribute('class', 'fas fa-drumstick-bite');
-  nav_elements.setAttribute('class', 'nav-elements');
+  navElements.setAttribute('class', 'nav-elements');
 
   title.setAttribute('id', 'home');
-  nav_menu.setAttribute('id', 'menu');
+  navMenu.setAttribute('id', 'menu');
 
   switch (activeIndex) {
     case 'menu':
-      nav_menu.setAttribute('class', 'active');
+      navMenu.setAttribute('class', 'active');
       break;
     case 'locations':
-      nav_locations.setAttribute('class', 'active');
+      navLocations.setAttribute('class', 'active');
       break;
     case 'contact':
-      nav_contact.setAttribute('class', 'active');
+      navContact.setAttribute('class', 'active');
       break;
     default:
   }
@@ -35,25 +35,25 @@ function generateNav(activeIndex) {
   title.appendChild(icon);
   title.innerHTML += ' Boneles.js';
 
-  nav_locations.setAttribute('id', 'locations');
-  nav_contact.setAttribute('id', 'contact');
+  navLocations.setAttribute('id', 'locations');
+  navContact.setAttribute('id', 'contact');
 
-  nav_menu.innerHTML = 'Menu';
-  nav_locations.innerHTML = 'Locations';
-  nav_contact.innerHTML = 'Contact';
+  navMenu.innerHTML = 'Menu';
+  navLocations.innerHTML = 'Locations';
+  navContact.innerHTML = 'Contact';
 
-  nav_list.appendChild(nav_menu);
-  nav_list.appendChild(nav_locations);
-  nav_list.appendChild(nav_contact);
+  navList.appendChild(navMenu);
+  navList.appendChild(navLocations);
+  navList.appendChild(navContact);
 
-  nav_elements.appendChild(nav_list);
+  navElements.appendChild(navList);
 
-  nav_content.appendChild(title);
-  nav_content.appendChild(nav_elements);
+  navContent.appendChild(title);
+  navContent.appendChild(navElements);
 
-  nav.appendChild(nav_content);
+  nav.appendChild(navContent);
 
   return nav;
 }
 
-export { generateNav };
+export default generateNav;

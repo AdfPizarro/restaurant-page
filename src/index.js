@@ -1,6 +1,6 @@
 import './style.css';
 import { generateLanding } from './modules/landing';
-import { generateNav } from './modules/nav';
+import  generateNav from './modules/nav';
 import { generateMenu } from './modules/menu';
 import { generateLocations } from './modules/location';
 import { generateContact } from './modules/contact';
