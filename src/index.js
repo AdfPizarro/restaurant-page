@@ -1,21 +1,53 @@
-import _ from 'lodash';
 import './style.css';
-import Land from './land.jpg';
+import generateLanding from './modules/landing';
+import generateNav from './modules/nav';
+import generateMenu from './modules/menu';
+import generateLocations from './modules/location';
+import generateContact from './modules/contact';
 
-function component() {
-  const element = document.createElement('div');
+import Landing from './land.png';
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+const container = document.getElementById('content');
 
- element.classList.add('hello');
- const myIcon = new Image();
+const restaurant = {
+  init() {
+    this.drawLanding();
+    this.eventListener();
+  },
+  eventListener() {
+    const home = document.getElementById('home');
+    home.addEventListener('click', restaurant.drawLanding, false);
+    const menu = document.getElementById('menu');
+    menu.addEventListener('click', restaurant.drawMenu, false);
+    const locations = document.getElementById('locations');
+    locations.addEventListener('click', restaurant.drawLocations, false);
+    const contact = document.getElementById('contact');
+    contact.addEventListener('click', restaurant.drawContact, false);
+  },
+  drawNav(activeIndex) {
+    container.appendChild(generateNav(activeIndex));
+    restaurant.eventListener();
+  },
+  drawLanding() {
+    container.innerHTML = '';
+    restaurant.drawNav();
+    container.appendChild(generateLanding(Landing));
+  },
+  drawMenu() {
+    container.innerHTML = '';
+    restaurant.drawNav('menu');
+    container.appendChild(generateMenu());
+  },
+  drawLocations() {
+    container.innerHTML = '';
+    restaurant.drawNav('locations');
+    container.appendChild(generateLocations());
+  },
+  drawContact() {
+    container.innerHTML = '';
+    restaurant.drawNav('contact');
+    container.appendChild(generateContact());
+  },
+};
 
- myIcon.src = Land;
-
-
- element.appendChild(myIcon);
-  return element;
-}
-
-document.body.appendChild(component());
+restaurant.init();
