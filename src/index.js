@@ -9,58 +9,45 @@ import Landing from './land.png';
 
 const container = document.getElementById('content');
 
-
-function clearContainer() {
-  container.innerHTML = '';
-}
-
-function drawNav(activeIndex) {
-  container.appendChild(generateNav(activeIndex));
-  restaurant.eventListener();
-}
-
-
-function drawLanding() {
-  clearContainer();
-  drawNav();
-  container.appendChild(generateLanding(Landing));
-}
-
-function drawMenu() {
-  clearContainer();
-  drawNav('menu');
-  container.appendChild(generateMenu());
-}
-
-function drawLocations() {
-  clearContainer();
-  drawNav('locations');
-  container.appendChild(generateLocations());
-}
-
-function drawContact() {
-  clearContainer();
-  drawNav('contact');
-  container.appendChild(generateContact());
-}
-
 const restaurant = {
   init() {
-    drawLanding();
+    this.drawLanding();
     this.eventListener();
   },
   eventListener() {
     const home = document.getElementById('home');
-    home.addEventListener('click', drawLanding, false);
+    home.addEventListener('click', restaurant.drawLanding, false);
     const menu = document.getElementById('menu');
-    menu.addEventListener('click', drawMenu, false);
+    menu.addEventListener('click', restaurant.drawMenu, false);
     const locations = document.getElementById('locations');
-    locations.addEventListener('click', drawLocations, false);
+    locations.addEventListener('click', restaurant.drawLocations, false);
     const contact = document.getElementById('contact');
-    contact.addEventListener('click', drawContact, false);
+    contact.addEventListener('click', restaurant.drawContact, false);
+  },
+  drawNav(activeIndex) {
+    container.appendChild(generateNav(activeIndex));
+    restaurant.eventListener();
+  },
+  drawLanding() {
+    container.innerHTML = '';
+    restaurant.drawNav();
+    container.appendChild(generateLanding(Landing));
+  },
+  drawMenu() {
+    container.innerHTML = '';
+    restaurant.drawNav('menu');
+    container.appendChild(generateMenu());
+  },
+  drawLocations() {
+    container.innerHTML = '';
+    restaurant.drawNav('locations');
+    container.appendChild(generateLocations());
+  },
+  drawContact() {
+    container.innerHTML = '';
+    restaurant.drawNav('contact');
+    container.appendChild(generateContact());
   },
 };
-
-
 
 restaurant.init();
