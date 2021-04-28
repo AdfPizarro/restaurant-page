@@ -45,7 +45,7 @@ menu.push(new Dish('Mango', '$44.30', 'MANGO', 'Simple and tasty (no dependencys
 menu.push(new Dish('Honey Mustard', '$44.30', 'HONEY', 'Weird combination, some people like it'));
 menu.push(new Dish('Veggies', '$12.30', 'VEGGIES', 'The prefect complement to bundle your meal'));
 
-function generateMenu() {
+const generateMenu = () => {
   const menuContainer = document.createElement('div');
   menuContainer.setAttribute('class', 'menu');
 
@@ -80,6 +80,6 @@ function generateMenu() {
   }
 
   return menuContainer;
-}
+};
 
 export default generateMenu;

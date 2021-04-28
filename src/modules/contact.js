@@ -1,6 +1,6 @@
 import Terminal from '../terminal.jpg';
 
-function generateContact() {
+const generateContact = () => {
   const contactContainer = document.createElement('div');
   contactContainer.setAttribute('class', 'contact');
 
@@ -22,6 +22,6 @@ function generateContact() {
   contactContainer.appendChild(imageContainer);
 
   return contactContainer;
-}
+};
 
 export default generateContact;

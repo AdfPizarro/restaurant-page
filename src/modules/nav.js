@@ -1,4 +1,4 @@
-function generateNav(activeIndex) {
+const generateNav = (activeIndex) => {
   const nav = document.createElement('nav');
   const navContent = document.createElement('div');
   const title = document.createElement('div');
@@ -54,6 +54,6 @@ function generateNav(activeIndex) {
   nav.appendChild(navContent);
 
   return nav;
-}
+};
 
 export default generateNav;

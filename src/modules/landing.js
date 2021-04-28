@@ -1,4 +1,4 @@
-function generateLanding(Landing) {
+const generateLanding = (Landing) => {
   const landingPage = document.createElement('div');
   const landingText = document.createElement('div');
   const landingTitle = document.createElement('div');
@@ -27,6 +27,6 @@ function generateLanding(Landing) {
   landingPage.appendChild(imageContainer);
 
   return landingPage;
-}
+};
 
 export default generateLanding;

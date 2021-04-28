@@ -11,7 +11,7 @@ locations.push(new Location('Boneless Ny', '232 West 29th Street, 10001-5201, Nu
 locations.push(new Location('Boneless Columbus', '80 Columbus Circle At 60th Street, 10023, Nueva York, EE. UU.', '812-428-511'));
 locations.push(new Location('Boneless Madison', 'Madison Avenue at 77th street, 10075, Nueva York, EE. UU.', '812-855-521'));
 
-function generateLocations() {
+const generateLocations = () => {
   const locationsContainer = document.createElement('div');
   locationsContainer.setAttribute('class', 'locations');
 
@@ -38,6 +38,6 @@ function generateLocations() {
   }
 
   return locationsContainer;
-}
+};
 
 export default generateLocations;
