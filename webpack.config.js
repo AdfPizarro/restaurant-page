@@ -16,10 +16,10 @@ module.exports = {
         test: /\.(png|svg|jpg|gif|jpeg)$/,
         loader: 'file-loader',
         options: {
-        outputPath: 'images',
-        publicPath: './images',
-        }
-      }
+          outputPath: 'images',
+          publicPath: './images',
+        },
+      },
     ],
   },
 };
